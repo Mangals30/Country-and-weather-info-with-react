@@ -1,38 +1,120 @@
 .App {
-  text-align: center;
+    
+}
+.CountriesList {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: darkgrey;
+}
+.country-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-left : 1rem;
+    margin-top : 3rem;
+    background-color: rgba(54, 115, 172,0.6);
+    font-size: 21px;
+    flex-wrap: wrap;
+    width : 23rem;
+    height : 15rem
+    
+}
+.flag,.weather-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 10rem
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.currency,.languages {
+    display: flex;
+}
+.search-div {
+    padding: 3rem;
+    background-image: linear-gradient(rgba(48, 132, 180, 0.6), rgba(15, 25, 53, 0.7)),url(./images/world-map3.jpg);
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white
+    
+}
+.search-input {
+    width : 25rem;
+    height: 3rem;
+    padding-left : 3rem;
+    padding-right: 3rem;
+    border-radius: 1rem;
+    outline: 0;
+    border: none;
+}
+.country {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.flag-div {
+    
+    width : 20rem;
+    display: flex;
+    justify-content: center;
+}
+.country-details {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left : 5rem;
+    padding-top: 1rem;
+    width: 18rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loading-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top : 5rem;
 }
-
-.App-link {
-  color: #61dafb;
+.weather-and-country {
+    display: flex;
+    background-color: thistle;
+    justify-content: center;
+    align-content: center;
+    padding-top: 4rem;
+    padding-bottom : 4rem;
+    margin-top: 4rem;
+    margin-bottom : 4rem;
+    font-size: 21px;
 }
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.weather-div {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 1rem;
+    width: 15rem;
 }
