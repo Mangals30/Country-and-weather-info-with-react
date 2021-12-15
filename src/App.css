@@ -1,120 +1,73 @@
-.App {
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .CountriesList {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: darkgrey;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  grid-gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: darkgrey;
 }
 .country-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin-left : 1rem;
-    margin-top : 3rem;
-    background-color: rgba(54, 115, 172,0.6);
-    font-size: 21px;
-    flex-wrap: wrap;
-    width : 23rem;
-    height : 15rem
-    
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(54, 115, 172, 0.6);
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
-.flag,.weather-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7rem;
-    width: 10rem
+.weather-image {
+  height: 8rem;
+  width: 8rem;
 }
 
-.currency,.languages {
-    display: flex;
-}
 .search-div {
-    padding: 3rem;
-    background-image: linear-gradient(rgba(48, 132, 180, 0.6), rgba(15, 25, 53, 0.7)),url(./images/world-map3.jpg);
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: white
-    
+  padding: 1rem;
+  height: 25vh;
+  background-image: linear-gradient(
+      rgba(48, 132, 180, 0.6),
+      rgba(15, 25, 53, 0.7)
+    ),
+    url(./images/world-map3.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 .search-input {
-    width : 25rem;
-    height: 3rem;
-    padding-left : 3rem;
-    padding-right: 3rem;
-    border-radius: 1rem;
-    outline: 0;
-    border: none;
+  padding: 1rem;
+  width: 25%;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  outline: 0;
+  border: none;
 }
-.country {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-}
-.flag-div {
-    
-    width : 20rem;
-    display: flex;
-    justify-content: center;
-}
-.country-details {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding-left : 5rem;
-    padding-top: 1rem;
-    width: 18rem;
-}
-
 
 .loading-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top : 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
 }
 .weather-and-country {
-    display: flex;
-    background-color: thistle;
-    justify-content: center;
-    align-content: center;
-    padding-top: 4rem;
-    padding-bottom : 4rem;
-    margin-top: 4rem;
-    margin-bottom : 4rem;
-    font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
 }
-.weather-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
+@media (max-width: 600px) {
+  .CountriesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.weather-div {
-    width: 10rem;
-    display: flex;
-    justify-content: center;
-}
-.weather-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding-top: 1rem;
-    width: 15rem;
+@media (max-width: 450px) {
+  .CountriesList {
+    grid-template-columns: 1fr;
+  }
 }
