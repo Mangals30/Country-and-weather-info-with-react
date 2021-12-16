@@ -36,9 +36,6 @@ class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(
-      `curr : ${this.state.countries.length} prev : ${prevState.countries.length}`
-    );
     const countries = [];
     const copiedCountries = [...this.state.countries];
     if (prevState.countries.length === 1) {
