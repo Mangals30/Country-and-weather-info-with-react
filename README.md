@@ -11,4 +11,5 @@ When the search results ends up in one result additional information about that 
 [Weather API](https://openweathermap.org/current)
 
 The project is deployed in the below site
+
 [Country And Weather Information](https://confident-neumann-82ae0d.netlify.app/)
