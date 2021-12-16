@@ -1,9 +1,8 @@
 import React from "react";
-import Weather from "./Weather";
 
 const Country = (props) => {
   const { country } = props;
-  const { name, capital, population, languages, current } = country;
+  const { name, capital, population, languages } = country;
 
   const countryInfo = (
     <div className="country-info">
@@ -13,15 +12,8 @@ const Country = (props) => {
       <div>Languages : {languages.join(", ")}</div>
     </div>
   );
-  if (current) {
-    return (
-      <div>
-        <Weather country={country} />
-      </div>
-    );
-  } else {
-    return <div>{countryInfo}</div>;
-  }
+
+  return <div>{countryInfo}</div>;
 };
 
 export default Country;

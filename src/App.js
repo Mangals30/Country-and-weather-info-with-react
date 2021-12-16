@@ -51,12 +51,13 @@ class App extends Component {
     if (prevState.countries.length > 1) {
       if (copiedCountries.length === 1) {
         for (const country of copiedCountries) {
-          const weatherUrl = `https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_PWD}&query=${country.capital}`;
+          let cityName =
+            country.capital === "Nil" ? country.name : country.capital;
+          const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_PWD}`;
           fetch(weatherUrl)
             .then((response) => response.json())
             .then((weatherData) => {
-              console.log(weatherData);
-              country.current = weatherData.current;
+              country.current = weatherData.main;
               countries.push(country);
               this.setState({ countries });
             });
