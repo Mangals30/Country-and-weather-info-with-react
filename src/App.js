@@ -36,6 +36,9 @@ class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
+    console.log(
+      `curr : ${this.state.countries.length} prev : ${prevState.countries.length}`
+    );
     const countries = [];
     const copiedCountries = [...this.state.countries];
     if (prevState.countries.length === 1) {
@@ -51,10 +54,11 @@ class App extends Component {
     if (prevState.countries.length > 1) {
       if (copiedCountries.length === 1) {
         for (const country of copiedCountries) {
-          const weatherUrl = `http://api.weatherstack.com/current?access_key=0a27ae9bdf271c9cb1b2edaa89d900f9&query=${country.capital}`;
+          const weatherUrl = `http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_PWD}&query=${country.capital}`;
           fetch(weatherUrl)
             .then((response) => response.json())
             .then((weatherData) => {
+              console.log(weatherData);
               country.current = weatherData.current;
               countries.push(country);
               this.setState({ countries });
